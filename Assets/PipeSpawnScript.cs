@@ -12,12 +12,14 @@ public class PipeSpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Spawn a pie
         spawnPipe();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Countdow timer to spawn a pipe
         if (timer < spawnRate)
         {
             timer += Time.deltaTime;
