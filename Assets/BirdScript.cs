@@ -17,10 +17,10 @@ public class BirdScript : MonoBehaviour
     void Update()
     {
         // Check for spacebar press
-        if (Input.GetKeyDown(KeyCode.Space) == true )
+        if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             // Move bird up
-            bird.velocity = Vector3.up * flapStreangth;
+            bird.linearVelocity = Vector3.up * flapStreangth;
         }
     }
 }

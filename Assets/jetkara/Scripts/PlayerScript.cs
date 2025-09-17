@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		fire.SetActive (true);
 		GetComponent<AudioSource>().Play();
-		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
 		GetComponent<Rigidbody2D>().AddForce(Vector2.up * 200);
 	}
 
@@ -40,7 +40,7 @@ public class PlayerScript : MonoBehaviour
 		{
 			if (col.tag == "Score")
 			{
-				GameObject.FindObjectOfType<GameManager>().Score++;
+				GameObject.FindFirstObjectByType<GameManager>().Score++;
 				Destroy(col.gameObject);
 			}
 			else if (col.tag == "Finish")
